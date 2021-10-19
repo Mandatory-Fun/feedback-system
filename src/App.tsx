@@ -1,4 +1,4 @@
-import React, { Component } from 'react';
+import React from 'react';
 import {
   BrowserRouter as Router,
   Switch,
@@ -10,6 +10,8 @@ import LoginPage from './pages/login';
 import GuardRoute from './routes/GuardRoute';
 
 function App() {
+  const userIsLogged = true;
+
   return (
     <Router>
       <Switch>
@@ -17,7 +19,10 @@ function App() {
           <Redirect to="/dashboard" />
         </Route>
 
-        <Route path="/login" component={LoginPage} />
+        <Route path="/login">
+          {!userIsLogged ? <LoginPage /> : <Redirect to="/dashboard" />}
+        </Route>
+
         <GuardRoute path="/dashboard" component={Dashboard} />
       </Switch>
     </Router>
