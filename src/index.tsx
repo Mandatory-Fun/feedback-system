@@ -5,7 +5,7 @@ import App from './App';
 import { initializeApp } from 'firebase/app';
 
 try {
-  const firebaseConfig = JSON.parse(process.env.APP_FIREBASE as string);
+  const firebaseConfig = JSON.parse(process.env.REACT_APP_FIREBASE as string);
   initializeApp(firebaseConfig);
 } catch (e) {
   throw new Error(
