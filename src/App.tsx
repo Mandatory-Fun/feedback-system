@@ -10,7 +10,7 @@ import LoginPage from './pages/login';
 import GuardRoute from './routes/GuardRoute';
 
 function App() {
-  const userIsLogged = true;
+  const userIsLogged = false;
 
   return (
     <Router>
