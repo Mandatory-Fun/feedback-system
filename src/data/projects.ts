@@ -33,27 +33,25 @@ export const PROJECTS =
             },
           ]
         },
-        [
-          {
-            "feedback2": [
-              {
-                "name": "user 3",
-                "feedbackTotal": 5,
-                "comments": ["Good", "good"]
-              },
-              {
-                "name": "user 1",
-                "feedbackTotal": 3,
-                "comments": ["Okay", "good"]
-              },
-              {
-                "name": "user 2",
-                "feedbackTotal": 1,
-                "comments": ["lazy", "not good"]
-              },
-            ]
-          }
-        ]
+        {
+          "feedback2": [
+            {
+              "name": "user 3",
+              "feedbackTotal": 5,
+              "comments": ["Good", "good"]
+            },
+            {
+              "name": "user 1",
+              "feedbackTotal": 3,
+              "comments": ["Okay", "good"]
+            },
+            {
+              "name": "user 2",
+              "feedbackTotal": 1,
+              "comments": ["lazy", "not good"]
+            },
+          ]
+        }
       ]
     },
     {
@@ -97,32 +95,30 @@ export const PROJECTS =
             },
           ]
         },
-        [
-          {
-            "feedback4": [
-              {
-                "name": "user 2",
-                "feedbackTotal": 1,
-                "comments": ["not active", "absent", "absent"]
-              },
-              {
-                "name": "user 6",
-                "feedbackTotal": 2,
-                "comments": ["Not good", "fine"]
-              },
-              {
-                "name": "user 5",
-                "feedbackTotal": 5,
-                "comments": ["Excellent!", "Good"]
-              },
-              {
-                "name": "user 7",
-                "feedbackTotal": 4,
-                "comments": ["Okay", "good"]
-              },
-            ]
-          }
-        ]
+        {
+          "feedback4": [
+            {
+              "name": "user 2",
+              "feedbackTotal": 1,
+              "comments": ["not active", "absent", "absent"]
+            },
+            {
+              "name": "user 6",
+              "feedbackTotal": 2,
+              "comments": ["Not good", "fine"]
+            },
+            {
+              "name": "user 5",
+              "feedbackTotal": 5,
+              "comments": ["Excellent!", "Good"]
+            },
+            {
+              "name": "user 7",
+              "feedbackTotal": 4,
+              "comments": ["Okay", "good"]
+            },
+          ]
+        }
       ]
     }
   ]
