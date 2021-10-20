@@ -22,32 +22,38 @@ const LoginPage = () => {
   return (
     <div className={styles.page}>
       <Card className={styles.mainCard}>
-        <Typography variant="h4" component="h2" className={styles.title}>
-          Log in
-        </Typography>
-        <FormControl className={styles.form}>
-          <div className={styles.email}>
-            <TextField
-              id="outlined-basic"
-              label="Email"
-              inputRef={emailRef}
-              required
-            />
-          </div>
-          <div className={styles.password}>
-            <TextField
-              id="outlined-basic"
-              label="Password"
-              type="password"
-              autoComplete="current-password"
-              inputRef={passwordRef}
-              required
-            />
-          </div>
-          <button className={styles.button} type="submit" onClick={handleLogin}>
+        <div className={styles.mainCard_container}>
+          <Typography variant="h4" component="h2" className={styles.title}>
             Log in
-          </button>
-        </FormControl>
+          </Typography>
+          <FormControl className={styles.form}>
+            <div className={styles.email}>
+              <TextField
+                id="outlined-basic"
+                label="Email"
+                inputRef={emailRef}
+                required
+              />
+            </div>
+            <div className={styles.password}>
+              <TextField
+                id="outlined-basic"
+                label="Password"
+                type="password"
+                autoComplete="current-password"
+                inputRef={passwordRef}
+                required
+              />
+            </div>
+            <button
+              className={styles.button}
+              type="submit"
+              onClick={handleLogin}
+            >
+              Log in
+            </button>
+          </FormControl>
+        </div>
       </Card>
     </div>
   );
