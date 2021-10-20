@@ -4,10 +4,20 @@
   display: flex;
   justify-content: center;
   align-items: center;
+
+  background: #1976d2;
 }
 
 .mainCard {
-  height: 80vh;
+  height: 80%;
+  min-width: 750px;
+
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.mainCard_container {
   width: 50vw;
 }
 
@@ -16,8 +26,6 @@
 
   display: flex;
   justify-content: center;
-
-  margin-top: 30px;
 }
 
 .form {
@@ -33,8 +41,6 @@
 .email,
 .password,
 .button {
-  width: 30%;
-
   font-size: 15px;
 
   padding: 10px;
@@ -43,4 +49,9 @@
 
 .button {
   width: 100px;
+}
+
+.email,
+.password {
+  width: 200px;
 }
