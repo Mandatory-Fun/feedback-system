@@ -16,7 +16,7 @@ const LoginPage = () => {
   const handleLogin = () => {
     // console.log((emailRef.current as any).value);
     // console.log((passwordRef.current as any).value);
-    dispatch(setAuth(true));
+    dispatch(setAuth(true, (emailRef.current as any).value));
   };
 
   return (

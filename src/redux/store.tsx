@@ -3,7 +3,7 @@ import rootReducer, { Store } from '.';
 import thunk from 'redux-thunk';
 
 const defaultState: Store = {
-  authReducer: { isSignedIn: false },
+  authReducer: { isSignedIn: false, email: '' },
 };
 
 const makeStore = () => {
