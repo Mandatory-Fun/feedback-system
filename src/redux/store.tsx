@@ -1,11 +1,13 @@
 import { applyMiddleware, compose, createStore } from "redux";
 import rootReducer, { Store } from ".";
-import thunk from "redux-thunk";
+
 import { PROJECTS } from "../data/projects";
+import thunk from "redux-thunk";
 
 const defaultState: Store = {
   authReducer: { isSignedIn: false, email: "" },
   projectReducer: PROJECTS,
+  
 };
 
 const makeStore = () => {
