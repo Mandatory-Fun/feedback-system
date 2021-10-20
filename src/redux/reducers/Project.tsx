@@ -1,4 +1,3 @@
-import { CREATE_NEW_FEEDBACK } from "../actions/Project";
 import { PROJECTS } from "../../data/projects";
 
 export const initState: any = [...PROJECTS];
@@ -35,9 +34,8 @@ export const projectReducer = (state = initState, action: any) => {
       const newProject = action.payload
       
       return [...state, newProject];
-     
       
-    case CREATE_NEW_FEEDBACK:
+    case 'CREATE_NEW_FEEDBACK':
       const [selectedProject] = [...state].filter(
         (el) => el.projectName === action.payload.nameOfProject);
   
