@@ -1,124 +1,127 @@
-export const PROJECTS =
-  [
-    {
-      "name": "Project 1",
-      "users": [
-        {
-          "name": "user 1"
-        },
-        {
-          "name": "user 2"
-        },
-        {
-          "name": "user 3"
-        }
-      ],
-      "feedbacks": [
-        {
-          "feedback1": [
-            {
-              "name": "user 1",
-              "feedbackTotal": 5,
-              "comments": ["Good", "good"]
-            },
-            {
-              "name": "user 2",
-              "feedbackTotal": 4,
-              "comments": ["Okay", "good"]
-            },
-            {
-              "name": "user 3",
-              "feedbackTotal": 4,
-              "comments": ["Good partner", "good"]
-            },
-          ]
-        },
-        {
-          "feedback2": [
-            {
-              "name": "user 3",
-              "feedbackTotal": 5,
-              "comments": ["Good", "good"]
-            },
-            {
-              "name": "user 1",
-              "feedbackTotal": 3,
-              "comments": ["Okay", "good"]
-            },
-            {
-              "name": "user 2",
-              "feedbackTotal": 1,
-              "comments": ["lazy", "not good"]
-            },
-          ]
-        }
-      ]
-    },
-    {
-      "name": "Project 2",
-      "users": [
-        {
-          "name": "user 2"
-        },
-        {
-          "name": "user 5"
-        },
-        {
-          "name": "user 6"
-        },
-        {
-          "name": "user 7"
-        },
-      ],
-      "feedbacks": [
-        {
-          "feedback3": [
-            {
-              "name": "user 2",
-              "feedbackTotal": 3,
-              "comments": ["Okay", "good", "normal"]
-            },
-            {
-              "name": "user 5",
-              "feedbackTotal": 1,
-              "comments": ["bad", "bad", "lazy"]
-            },
-            {
-              "name": "user 6",
-              "feedbackTotal": 2,
-              "comments": ["not active", "not contribute", "not good"]
-            },
-            {
-              "name": "user 7",
-              "feedbackTotal": 4,
-              "comments": ["good", "good", "good"]
-            },
-          ]
-        },
-        {
-          "feedback4": [
-            {
-              "name": "user 2",
-              "feedbackTotal": 1,
-              "comments": ["not active", "absent", "absent"]
-            },
-            {
-              "name": "user 6",
-              "feedbackTotal": 2,
-              "comments": ["Not good", "fine"]
-            },
-            {
-              "name": "user 5",
-              "feedbackTotal": 5,
-              "comments": ["Excellent!", "Good"]
-            },
-            {
-              "name": "user 7",
-              "feedbackTotal": 4,
-              "comments": ["Okay", "good"]
-            },
-          ]
-        }
-      ]
-    }
-  ]
+export const PROJECTS = [
+  {
+    projectName: "Project 1",
+    listOfUsers: [
+      {
+        userName: "user 1",
+      },
+      {
+        userName: "user 2",
+      },
+      {
+        userName: "user 3",
+      },
+    ],
+    listOfFeedbacks: [
+      {
+        feedbackName: "feedback1",
+        listOfComments: [
+          {
+            feedbackedUser: "user 1",
+            feedbackTotal: 5,
+            comments: ["Good", "good"],
+          },
+          {
+            feedbackedUser: "user 2",
+            feedbackTotal: 4,
+            comments: ["Okay", "good"],
+          },
+          {
+            feedbackedUser: "user 3",
+            feedbackTotal: 4,
+            comments: ["Good partner", "good"],
+          },
+        ],
+      },
+      {
+        feedbackName: "feedback2",
+        listOfComments: [
+          {
+            feedbackedUser: "user 3",
+            feedbackTotal: 5,
+            comments: ["Good", "good"],
+          },
+          {
+            feedbackedUser: "user 1",
+            feedbackTotal: 3,
+            comments: ["Okay", "good"],
+          },
+          {
+            feedbackedUser: "user 2",
+            feedbackTotal: 1,
+            comments: ["lazy", "not good"],
+          },
+        ],
+      },
+    ],
+  },
+  {
+    projectName: "Project 2",
+    listOfUsers: [
+      {
+        userName: "user 2",
+      },
+      {
+        userName: "user 5",
+      },
+      {
+        userName: "user 6",
+      },
+      {
+        userName: "user 7",
+      },
+    ],
+    listOfFeedbacks: [
+      {
+        feedbackName: "feedback3",
+        listOfComments: [
+          {
+            feedbackedUser: "user 2",
+            feedbackTotal: 3,
+            comments: ["Okay", "good", "normal"],
+          },
+          {
+            feedbackedUser: "user 5",
+            feedbackTotal: 1,
+            comments: ["bad", "bad", "lazy"],
+          },
+          {
+            feedbackedUser: "user 6",
+            feedbackTotal: 2,
+            comments: ["not active", "not contribute", "not good"],
+          },
+          {
+            feedbackedUser: "user 7",
+            feedbackTotal: 4,
+            comments: ["good", "good", "good"],
+          },
+        ],
+      },
+      {
+        feedbackName: "feedback4",
+        listOfComments: [
+          {
+            feedbackedUser: "user 2",
+            feedbackTotal: 1,
+            comments: ["not active", "absent", "absent"],
+          },
+          {
+            feedbackedUser: "user 6",
+            feedbackTotal: 2,
+            comments: ["Not good", "fine"],
+          },
+          {
+            feedbackedUser: "user 5",
+            feedbackTotal: 5,
+            comments: ["Excellent!", "Good"],
+          },
+          {
+            feedbackedUser: "user 7",
+            feedbackTotal: 4,
+            comments: ["Okay", "good"],
+          },
+        ],
+      },
+    ],
+  },
+];
