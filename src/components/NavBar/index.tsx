@@ -1,5 +1,5 @@
 import React, { useState } from 'react';
-import { Search, SearchIconWrapper, StyledInputBase } from './search';
+import { Search, SearchIconWrapper, StyledInputBase } from './SearchComp';
 
 import AccountCircle from '@mui/icons-material/AccountCircle';
 import AppBar from '@mui/material/AppBar';

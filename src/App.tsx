@@ -6,9 +6,8 @@ import {
 } from 'react-router-dom';
 
 import Dashboard from './pages/dashboard';
-import GuardRoute from './routes/GuardRoute';
 import LoginPage from './pages/login';
-import NavBar from './components/NavBar/navbar';
+import NavBar from './components/NavBar';
 import React from 'react';
 import { Store } from './redux';
 import { useSelector } from 'react-redux';
@@ -31,7 +30,8 @@ function App() {
           {!userIsLogged ? <LoginPage /> : <Redirect to="/dashboard" />}
         </Route>
 
-        <GuardRoute path="/dashboard" component={Dashboard} />
+        {/*<GuardRoute path="/dashboard" component={Dashboard} />*/}
+        <Route path="/dashboard" component={Dashboard} />
       </Switch>
     </Router>
   );

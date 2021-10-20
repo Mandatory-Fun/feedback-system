@@ -1,11 +1,3 @@
-import { Dispatch } from 'redux';
-// import {
-//   signInWithEmailAndPassword,
-//   signOut,
-//   onAuthStateChanged,
-// } from 'firebase/auth';
-
-import { auth } from '../../firebase';
 
 export const SET_USER = 'SET_USER';
 
