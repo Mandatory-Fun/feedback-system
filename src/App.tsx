@@ -8,6 +8,7 @@ import {
 } from "react-router-dom";
 import Dashboard from "./pages/dashboard";
 import LoginPage from "./pages/login";
+import NavBar from "./components/NavBar";
 import FeedbackListPage from "./pages/feedback";
 import { Store } from "./redux";
 import GuardRoute from "./routes/GuardRoute";
@@ -19,6 +20,8 @@ function App() {
 
   return (
     <Router>
+      <NavBar />
+
       <Switch>
         <Route exact path="/">
           <Redirect to="/dashboard" />
