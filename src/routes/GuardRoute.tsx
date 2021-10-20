@@ -1,8 +1,12 @@
 import React, { FC } from 'react';
+import { useSelector } from 'react-redux';
 import { Route, Redirect } from 'react-router-dom';
+import { Store } from '../redux';
 
 const GuardRoute: FC<React.ComponentProps<typeof Route>> = (props) => {
-  const userIsLogged = false;
+  const userIsLogged = useSelector(
+    (state: Store) => state.authReducer.isSignedIn
+  );
 
   return (
     <Route {...props}>
