@@ -26,7 +26,7 @@ const FeedbackListPage = () => {
 
   const listOfFeedbackOfProject = useSelector(
     (state: Store) => state.projectReducer
-  ).filter((el: any) => el.name === nameOfProject);
+  ).filter((el: any) => el.projectName === nameOfProject);
 
   return (
     <div>
@@ -48,7 +48,6 @@ const FeedbackListPage = () => {
               color="secondary"
               variant="contained"
               onClick={() => {
-                console.log("here: ", (inputFeedbackRef.current as any).value);
                 dispatch(
                   createNewFeedback(
                     nameOfProject,
@@ -62,7 +61,7 @@ const FeedbackListPage = () => {
           </Grid>
         </Grid>
         <TemplateListItem
-          listOfFeedbacks={listOfFeedbackOfProject[0].feedbacks}
+          listOfFeedbacks={listOfFeedbackOfProject[0].listOfFeedbacks}
         />
       </Card>
     </div>

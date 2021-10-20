@@ -2,14 +2,12 @@ import * as React from "react";
 import List from "@mui/material/List";
 import ListItem from "@mui/material/ListItem";
 import ListItemText from "@mui/material/ListItemText";
-import CommentIcon from "@mui/icons-material/Comment";
-import IconButton from "@mui/material/IconButton";
 import Button from "@mui/material/Button";
 
 export default function TemplateListItem(props: any) {
   const { listOfFeedbacks } = props;
-  const arrayOfTitleOfFeedbacks = [...listOfFeedbacks].map((el) =>
-    Object.keys(el)
+  const arrayOfTitleOfFeedbacks = [...listOfFeedbacks].map(
+    (el) => el.feedbackName
   );
 
   return (

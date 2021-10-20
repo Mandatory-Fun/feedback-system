@@ -10,19 +10,19 @@ export default (state = initState, action: any) => {
       return state;
     case CREATE_NEW_FEEDBACK:
       const [selectedProject] = [...state].filter(
-        (el) => el.name === action.payload.nameOfProject
+        (el) => el.projectName === action.payload.nameOfProject
       );
 
       const tempProject = {
         ...selectedProject,
-        feedbacks: [
-          ...selectedProject.feedbacks,
-          { [action.payload.newFeedback]: [] },
+        listOfFeedbacks: [
+          ...selectedProject.listOfFeedbacks,
+          { feedbackName: action.payload.newFeedback, listOfComments: [] },
         ],
       };
 
       return [...state].map((el) =>
-        el.name === action.payload.nameOfProject ? tempProject : el
+        el.projectName === action.payload.nameOfProject ? tempProject : el
       );
   }
 };

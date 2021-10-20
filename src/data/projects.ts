@@ -1,51 +1,53 @@
 export const PROJECTS = [
   {
-    name: "Project 1",
-    users: [
+    projectName: "Project 1",
+    listOfUsers: [
       {
-        name: "user 1",
+        userName: "user 1",
       },
       {
-        name: "user 2",
+        userName: "user 2",
       },
       {
-        name: "user 3",
+        userName: "user 3",
       },
     ],
-    feedbacks: [
+    listOfFeedbacks: [
       {
-        feedback1: [
+        feedbackName: "feedback1",
+        listOfComments: [
           {
-            name: "user 1",
+            feedbackedUser: "user 1",
             feedbackTotal: 5,
             comments: ["Good", "good"],
           },
           {
-            name: "user 2",
+            feedbackedUser: "user 2",
             feedbackTotal: 4,
             comments: ["Okay", "good"],
           },
           {
-            name: "user 3",
+            feedbackedUser: "user 3",
             feedbackTotal: 4,
             comments: ["Good partner", "good"],
           },
         ],
       },
       {
-        feedback2: [
+        feedbackName: "feedback2",
+        listOfComments: [
           {
-            name: "user 3",
+            feedbackedUser: "user 3",
             feedbackTotal: 5,
             comments: ["Good", "good"],
           },
           {
-            name: "user 1",
+            feedbackedUser: "user 1",
             feedbackTotal: 3,
             comments: ["Okay", "good"],
           },
           {
-            name: "user 2",
+            feedbackedUser: "user 2",
             feedbackTotal: 1,
             comments: ["lazy", "not good"],
           },
@@ -54,65 +56,67 @@ export const PROJECTS = [
     ],
   },
   {
-    name: "Project 2",
-    users: [
+    projectName: "Project 2",
+    listOfUsers: [
       {
-        name: "user 2",
+        userName: "user 2",
       },
       {
-        name: "user 5",
+        userName: "user 5",
       },
       {
-        name: "user 6",
+        userName: "user 6",
       },
       {
-        name: "user 7",
+        userName: "user 7",
       },
     ],
-    feedbacks: [
+    listOfFeedbacks: [
       {
-        feedback3: [
+        feedbackName: "feedback3",
+        listOfComments: [
           {
-            name: "user 2",
+            feedbackedUser: "user 2",
             feedbackTotal: 3,
             comments: ["Okay", "good", "normal"],
           },
           {
-            name: "user 5",
+            feedbackedUser: "user 5",
             feedbackTotal: 1,
             comments: ["bad", "bad", "lazy"],
           },
           {
-            name: "user 6",
+            feedbackedUser: "user 6",
             feedbackTotal: 2,
             comments: ["not active", "not contribute", "not good"],
           },
           {
-            name: "user 7",
+            feedbackedUser: "user 7",
             feedbackTotal: 4,
             comments: ["good", "good", "good"],
           },
         ],
       },
       {
-        feedback4: [
+        feedbackName: "feedback4",
+        listOfComments: [
           {
-            name: "user 2",
+            feedbackedUser: "user 2",
             feedbackTotal: 1,
             comments: ["not active", "absent", "absent"],
           },
           {
-            name: "user 6",
+            feedbackedUser: "user 6",
             feedbackTotal: 2,
             comments: ["Not good", "fine"],
           },
           {
-            name: "user 5",
+            feedbackedUser: "user 5",
             feedbackTotal: 5,
             comments: ["Excellent!", "Good"],
           },
           {
-            name: "user 7",
+            feedbackedUser: "user 7",
             feedbackTotal: 4,
             comments: ["Okay", "good"],
           },
