@@ -13,12 +13,12 @@ type projectTypeProps = {
 
 export default function PrjCard({prjData} : projectTypeProps) {
   return (
-    <Grid item xs={2} key={prjData.id}>
+    <Grid item xs={4} key={prjData.projectId}>
       <Card sx={{ width: 300}}>
         <CardActions>
           <CardContent>
           <Typography sx={{ fontSize: 14 }} color="text.secondary" gutterBottom>
-            {prjData.prjName}
+            {prjData.title}
           </Typography>
           </CardContent>
         </CardActions>

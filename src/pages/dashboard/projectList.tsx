@@ -13,7 +13,7 @@ function ProjectList({projectList} : ProjectListProps) {
   const [prjList, setPrjList] = useState<projectListType>(projectList)
   
   return (
-    <Grid container spacing={2}>
+    <Grid container spacing={2} width='100%' m='auto'>
       {prjList.map((project: projectType) => (
         <PrjCard prjData={project}/>
       ))}
