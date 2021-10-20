@@ -2,7 +2,9 @@ import { applyMiddleware, compose, createStore } from 'redux';
 import rootReducer, { Store } from '.';
 import thunk from 'redux-thunk';
 
-const defaultState: Store = {};
+const defaultState: Store = {
+  authReducer: { isSignedIn: false, email: '' },
+};
 
 const makeStore = () => {
   const middlewares = [thunk];

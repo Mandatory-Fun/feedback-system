@@ -31,11 +31,16 @@
 }
 
 .email,
-.password {
+.password,
+.button {
   width: 30%;
 
   font-size: 15px;
 
   padding: 10px;
   margin-top: 50px;
+}
+
+.button {
+  width: 100px;
 }
