@@ -1,9 +1,11 @@
-import { useSelector } from "react-redux";
+import React, { useRef } from "react";
+import { useSelector, useDispatch } from "react-redux";
 import { useParams } from "react-router-dom";
 
 import { Store } from "../../redux";
 import styles from "./styles.module.css";
 import TemplateListItem from "../../components/TemplateListItem";
+import { createNewFeedback } from "../../redux/actions/Project";
 
 import Card from "@mui/material/Card";
 import Typography from "@mui/material/Typography";
@@ -16,11 +18,15 @@ type Params = {
 };
 
 const FeedbackListPage = () => {
+  const inputFeedbackRef = useRef();
+
   const { nameOfProject } = useParams<Params>();
 
-  const [listOfFeedbackOfProject] = useSelector(
+  const dispatch = useDispatch();
+
+  const listOfFeedbackOfProject = useSelector(
     (state: Store) => state.projectReducer
-  ).filter((el) => el.name === nameOfProject);
+  ).filter((el: any) => el.name === nameOfProject);
 
   return (
     <div>
@@ -30,7 +36,11 @@ const FeedbackListPage = () => {
         </Typography>
         <Grid container>
           <Grid item>
-            <TextField label="Name of new feedback" variant="outlined" />
+            <TextField
+              inputRef={inputFeedbackRef}
+              label="Name of new feedback"
+              variant="outlined"
+            />
           </Grid>
 
           <Grid item alignItems="stretch" style={{ display: "flex" }}>
@@ -38,14 +48,22 @@ const FeedbackListPage = () => {
               color="secondary"
               variant="contained"
               onClick={() => {
-                console.log("Clicked !!");
+                console.log("here: ", (inputFeedbackRef.current as any).value);
+                dispatch(
+                  createNewFeedback(
+                    nameOfProject,
+                    (inputFeedbackRef.current as any).value
+                  )
+                );
               }}
             >
               Create
             </Button>
           </Grid>
         </Grid>
-        <TemplateListItem listOfFeedbacks={listOfFeedbackOfProject.feedbacks} />
+        <TemplateListItem
+          listOfFeedbacks={listOfFeedbackOfProject[0].feedbacks}
+        />
       </Card>
     </div>
   );
