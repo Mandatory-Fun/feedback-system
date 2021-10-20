@@ -1,6 +1,7 @@
-
-export const SET_USER = 'SET_USER';
-
+"use strict";
+exports.__esModule = true;
+exports.setAuth = exports.SET_USER = void 0;
+exports.SET_USER = 'SET_USER';
 // export function signInWithEmailAndPwd(email: string, password: string) {
 //   signInWithEmailAndPassword(auth, email, password)
 //     .then((userCredential) => {
@@ -15,7 +16,6 @@ export const SET_USER = 'SET_USER';
 //       alert(error.message);
 //     });
 // }
-
 // export function logOut() {
 //   signOut(auth)
 //     .then(() => {
@@ -27,7 +27,6 @@ export const SET_USER = 'SET_USER';
 //       // An error happened.
 //     });
 // }
-
 // export function checkAuth() {
 //   onAuthStateChanged(auth, function (user) {
 //     if (user) {
@@ -41,10 +40,10 @@ export const SET_USER = 'SET_USER';
 //     }
 //   });
 // }
-
-export function setAuth(state: boolean, email: string) {
-  return {
-    type: SET_USER,
-    payload: { state, email },
-  };
+function setAuth(state, email) {
+    return {
+        type: exports.SET_USER,
+        payload: { state: state, email: email }
+    };
 }
+exports.setAuth = setAuth;
