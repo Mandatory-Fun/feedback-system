@@ -3,26 +3,26 @@ import { Button, Typography } from '@mui/material';
 import ProjectList from './projectList';
 import React from 'react';
 
-export type projectType = {id: string, prjName: string}
+export type projectType = {id: string, prjName: string, members: []}
 
 export type projectListType = projectType[]
 
-const myProjectList = [
-  {id: '1a', prjName: 'abc'},
-  {id: '2b', prjName: 'aaa'},
-  {id: '3c', prjName: 'bbb'},
-  {id: '4c', prjName: 'bbb'},
-  {id: '5c', prjName: 'bbb'},
-  {id: '6c', prjName: 'bbb'},
+const myProjectList : projectListType = [
+  {id: '1a', prjName: 'abc', members: []},
+  {id: '2b', prjName: 'aaa', members: []},
+  {id: '3c', prjName: 'bbb', members: []},
+  {id: '4c', prjName: 'bbb', members: []},
+  {id: '5c', prjName: 'bbb', members: []},
+  {id: '6c', prjName: 'bbb', members: []},
 ]
 
-const JoinedProjectList = [
-  {id: '1a', prjName: 'abc'},
-  {id: '2b', prjName: 'aaa'},
-  {id: '3c', prjName: 'bbb'},
-  {id: '4c', prjName: 'bbb'},
-  {id: '5c', prjName: 'bbb'},
-  {id: '6c', prjName: 'bbb'},
+const JoinedProjectList : projectListType = [
+  {id: '1a', prjName: 'abc', members: []},
+  {id: '2b', prjName: 'aaa', members: []},
+  {id: '3c', prjName: 'bbb', members: []},
+  {id: '4c', prjName: 'bbb', members: []},
+  {id: '5c', prjName: 'bbb', members: []},
+  {id: '6c', prjName: 'bbb', members: []},
 ]
 
 

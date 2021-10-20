@@ -11,8 +11,6 @@ type projectTypeProps = {
   prjData: projectType
 }
 
-
-
 export default function PrjCard({prjData} : projectTypeProps) {
   return (
     <Grid item xs={2} key={prjData.id}>

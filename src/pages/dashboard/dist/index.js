@@ -4,20 +4,20 @@ var material_1 = require("@mui/material");
 var projectList_1 = require("./projectList");
 var react_1 = require("react");
 var myProjectList = [
-    { id: '1a', prjName: 'abc' },
-    { id: '2b', prjName: 'aaa' },
-    { id: '3c', prjName: 'bbb' },
-    { id: '4c', prjName: 'bbb' },
-    { id: '5c', prjName: 'bbb' },
-    { id: '6c', prjName: 'bbb' },
+    { id: '1a', prjName: 'abc', members: [] },
+    { id: '2b', prjName: 'aaa', members: [] },
+    { id: '3c', prjName: 'bbb', members: [] },
+    { id: '4c', prjName: 'bbb', members: [] },
+    { id: '5c', prjName: 'bbb', members: [] },
+    { id: '6c', prjName: 'bbb', members: [] },
 ];
 var JoinedProjectList = [
-    { id: '1a', prjName: 'abc' },
-    { id: '2b', prjName: 'aaa' },
-    { id: '3c', prjName: 'bbb' },
-    { id: '4c', prjName: 'bbb' },
-    { id: '5c', prjName: 'bbb' },
-    { id: '6c', prjName: 'bbb' },
+    { id: '1a', prjName: 'abc', members: [] },
+    { id: '2b', prjName: 'aaa', members: [] },
+    { id: '3c', prjName: 'bbb', members: [] },
+    { id: '4c', prjName: 'bbb', members: [] },
+    { id: '5c', prjName: 'bbb', members: [] },
+    { id: '6c', prjName: 'bbb', members: [] },
 ];
 var Dashboard = function () {
     return react_1["default"].createElement("div", null,

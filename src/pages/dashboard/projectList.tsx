@@ -9,7 +9,6 @@ type ProjectListProps = {
 }
 
 
-
 function ProjectList({projectList} : ProjectListProps) {
   const [prjList, setPrjList] = useState<projectListType>(projectList)
   
