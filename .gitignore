@@ -26,3 +26,5 @@ yarn-error.log*
 # vscode
 .vscode
 src/redux/dist
+
+dist
