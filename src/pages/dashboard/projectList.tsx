@@ -1,20 +1,19 @@
-import React, { useState } from 'react'
-import { projectListType, projectType } from '.'
+import { ProjectsType, projectType } from '../../types'
 
 import { Grid } from '@mui/material'
 import PrjCard from '../../components/PrjCard'
+import React from 'react'
 
 type ProjectListProps = {
-  projectList: projectListType
+  projectList: ProjectsType
 }
 
 
 function ProjectList({projectList} : ProjectListProps) {
-  const [prjList, setPrjList] = useState<projectListType>(projectList)
   
   return (
     <Grid container spacing={2} width='100%' m='auto'>
-      {prjList.map((project: projectType) => (
+      {projectList.map((project: projectType) => (
         <PrjCard prjData={project}/>
       ))}
      </Grid>
