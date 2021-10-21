@@ -1,6 +1,6 @@
 import React, { useRef } from "react";
 import { useSelector, useDispatch } from "react-redux";
-import { useParams } from "react-router-dom";
+import { useParams, Switch, Route, useRouteMatch } from "react-router-dom";
 
 import { Store } from "../../redux";
 import styles from "./styles.module.css";
@@ -12,6 +12,7 @@ import Typography from "@mui/material/Typography";
 import TextField from "@mui/material/TextField";
 import Grid from "@mui/material/Grid";
 import Button from "@mui/material/Button";
+import Summary from "../summary";
 
 type Params = {
   nameOfProject: string;
@@ -19,6 +20,8 @@ type Params = {
 
 const FeedbackListPage = () => {
   const inputFeedbackRef = useRef();
+
+  let { path } = useRouteMatch();
 
   const { nameOfProject } = useParams<Params>();
 
@@ -29,42 +32,50 @@ const FeedbackListPage = () => {
   ).filter((el: any) => el.projectName === nameOfProject);
 
   return (
-    <div>
-      <Card className={styles.mainCard}>
-        <Typography variant="h4" component="h2" className={styles.title}>
-          {nameOfProject}
-        </Typography>
-        <Grid container>
-          <Grid item>
-            <TextField
-              inputRef={inputFeedbackRef}
-              label="Name of new feedback"
-              variant="outlined"
-            />
-          </Grid>
+    <Switch>
+      <Route exact path={path}>
+        <div>
+          <Card className={styles.mainCard}>
+            <Typography variant="h4" component="h2" className={styles.title}>
+              {nameOfProject}
+            </Typography>
+            <Grid container>
+              <Grid item>
+                <TextField
+                  inputRef={inputFeedbackRef}
+                  label="Name of new feedback"
+                  variant="outlined"
+                />
+              </Grid>
 
-          <Grid item alignItems="stretch" style={{ display: "flex" }}>
-            <Button
-              color="secondary"
-              variant="contained"
-              onClick={() => {
-                dispatch(
-                  createNewFeedback(
-                    nameOfProject,
-                    (inputFeedbackRef.current as any).value
-                  )
-                );
-              }}
-            >
-              Create
-            </Button>
-          </Grid>
-        </Grid>
-        <TemplateListItem
-          listOfFeedbacks={listOfFeedbackOfProject[0].listOfFeedbacks}
-        />
-      </Card>
-    </div>
+              <Grid item alignItems="stretch" style={{ display: "flex" }}>
+                <Button
+                  color="secondary"
+                  variant="contained"
+                  onClick={() => {
+                    dispatch(
+                      createNewFeedback(
+                        nameOfProject,
+                        (inputFeedbackRef.current as any).value
+                      )
+                    );
+                  }}
+                >
+                  Create
+                </Button>
+              </Grid>
+            </Grid>
+            <TemplateListItem
+              listOfFeedbacks={listOfFeedbackOfProject[0].listOfFeedbacks}
+            />
+          </Card>
+        </div>
+      </Route>
+      <Route
+        path={`${path}/:feedbackName`}
+        component={Summary}
+      />
+    </Switch>
   );
 };
 
