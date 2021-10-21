@@ -1,7 +1,6 @@
 import React from 'react';
 import { useSelector } from 'react-redux';
 import { Link, useParams } from "react-router-dom";
-import Grid from "@mui/material/Grid";
 import Button from "@mui/material/Button";
 import { Box } from '@mui/system';
 import { Typography } from '@mui/material';
@@ -50,13 +49,14 @@ function Summary() {
                     <ListItemText primary="Comments: " />
                     <ListOfComments comments={feedbackSum.comments} />
                 </Box>
-                <Box sx={{ justifyContent: 'flex-end' }}>
+                <div style={{ justifyContent: 'flex-end', display: 'flex', maxWidth: "480" }}>
+                    <div></div>
                     <Button variant="contained" size="large">
                         <Link to='/dashboard' style={{ color: "white", textDecoration: "none" }}>
                             Go back Projects
                         </Link>
                     </Button>
-                </Box>
+                </div>
             </List>
 
         </Box >
