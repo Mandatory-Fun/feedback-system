@@ -26,8 +26,9 @@ export default function TemplateListItem(props: any) {
               <Button variant="contained">Give feedback</Button>
             ) : (
               <Button variant="outlined">
-                <Link to={`${url}/${value}`}>Read feedback
-                </Link></Button>
+                <Link to={`${url}/${value}`} target='_blank'>Read feedback
+                </Link>
+              </Button>
             )
           }
         >

@@ -14,38 +14,41 @@ type Params = {
 
 function Summary() {
 
-    const { feedbackName } = useParams<Params>();
+    const { nameOfProject, feedbackName } = useParams<Params>();
 
     const dispatch = useDispatch();
 
-
-    const allProjects = useSelector((state: Store) => state.projectReducer)
-    console.log(allProjects);
-
-    const listOfFeedbacks = allProjects.filter((project: any) => project.listOfFeedbacks.find((cmt: any) => cmt.feedbackName === feedbackName))[0].listOfFeedbacks;
-    console.log("listOfFeedback", listOfFeedbacks);
+    const listOfFeedbacks = useSelector(
+        (state: Store) => state.projectReducer
+    ).filter((el: any) => el.projectName === nameOfProject)[0].listOfFeedbacks;
 
     const listOfComments = listOfFeedbacks.filter((feedback: any) => feedback.feedbackName === feedbackName)[0].listOfComments
 
-    const feedbackSum = listOfComments.filter((sum: any) => sum.feedbackedUser === 'user2')[0]
-
-
+    const feedbackSum = listOfComments.filter((sum: any) => sum.feedbackedUser === 'user 2')[0]
 
 
     return (
         <div className='container'>
-            <h1>summary</h1>
+            <h1>SUMMARY</h1>
             <div>
                 <div>
-                    <h5>Your feedback Score: </h5>
-                    <h5>{feedbackSum.feedbackTotal}</h5>
+                    <h3>Name of Project: </h3>
+                    <h2>{nameOfProject}</h2>
                 </div>
                 <div>
-                    <h5>Comments</h5>
+                    <h3>Name of Feedback: </h3>
+                    <h2>{feedbackName}</h2>
+                </div>
+                <div>
+                    <h3>Your feedback Score: </h3>
+                    <h3>{feedbackSum.feedbackTotal}</h3>
+                </div>
+                <div>
+                    <h3>Comments</h3>
                     <ListOfComments comments={feedbackSum.comments} />
                 </div>
             </div>
-            <Button variant="contained" >
+            <Button variant="contained" size="large" >
                 <Link to='/dashboard'>
                     Go back Projects
                 </Link>

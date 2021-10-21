@@ -3,15 +3,6 @@ export const PROJECTS = [
     projectName: "Project1",
     listOfUsers: [
       {
-<<<<<<< HEAD
-        userName: "user1",
-      },
-      {
-        userName: "user2",
-      },
-      {
-        userName: "user3",
-=======
         userName: "user 1",
         owner: false
       },
@@ -22,7 +13,6 @@ export const PROJECTS = [
       {
         userName: "user 3",
         owner: false
->>>>>>> upstream/develop
       },
     ],
     listOfFeedbacks: [
@@ -30,17 +20,17 @@ export const PROJECTS = [
         feedbackName: "feedback1",
         listOfComments: [
           {
-            feedbackedUser: "user1",
+            feedbackedUser: "user 1",
             feedbackTotal: 5,
             comments: ["Good", "good"],
           },
           {
-            feedbackedUser: "user2",
+            feedbackedUser: "user 2",
             feedbackTotal: 4,
             comments: ["Okay", "good"],
           },
           {
-            feedbackedUser: "user3",
+            feedbackedUser: "user 3",
             feedbackTotal: 4,
             comments: ["Good partner", "good"],
           },
@@ -50,17 +40,17 @@ export const PROJECTS = [
         feedbackName: "feedback2",
         listOfComments: [
           {
-            feedbackedUser: "user3",
+            feedbackedUser: "user 3",
             feedbackTotal: 5,
             comments: ["Good", "good"],
           },
           {
-            feedbackedUser: "user1",
+            feedbackedUser: "user 1",
             feedbackTotal: 3,
             comments: ["Okay", "good"],
           },
           {
-            feedbackedUser: "user2",
+            feedbackedUser: "user 2",
             feedbackTotal: 1,
             comments: ["lazy", "not good"],
           },
@@ -72,18 +62,6 @@ export const PROJECTS = [
     projectName: "Project2",
     listOfUsers: [
       {
-<<<<<<< HEAD
-        userName: "user2",
-      },
-      {
-        userName: "user5",
-      },
-      {
-        userName: "user6",
-      },
-      {
-        userName: "user7",
-=======
         userName: "user 2",
         owner: false
       },
@@ -154,7 +132,7 @@ export const PROJECTS = [
     ],
   },
   {
-    projectName: "Project 3",
+    projectName: "Project3",
     listOfUsers: [
       {
         userName: "user 2",
@@ -175,7 +153,7 @@ export const PROJECTS = [
     ],
     listOfFeedbacks: [
       {
-        feedbackName: "feedback3",
+        feedbackName: "feedback5",
         listOfComments: [
           {
             feedbackedUser: "user 2",
@@ -200,7 +178,7 @@ export const PROJECTS = [
         ],
       },
       {
-        feedbackName: "feedback4",
+        feedbackName: "feedback6",
         listOfComments: [
           {
             feedbackedUser: "user 2",
@@ -227,7 +205,7 @@ export const PROJECTS = [
     ],
   },
   {
-    projectName: "Project 4",
+    projectName: "Project4",
     listOfUsers: [
       {
         userName: "user 2",
@@ -248,7 +226,7 @@ export const PROJECTS = [
     ],
     listOfFeedbacks: [
       {
-        feedbackName: "feedback3",
+        feedbackName: "feedback7",
         listOfComments: [
           {
             feedbackedUser: "user 2",
@@ -273,7 +251,7 @@ export const PROJECTS = [
         ],
       },
       {
-        feedbackName: "feedback4",
+        feedbackName: "feedback8",
         listOfComments: [
           {
             feedbackedUser: "user 2",
@@ -300,7 +278,7 @@ export const PROJECTS = [
     ],
   },
   {
-    projectName: "Project 5",
+    projectName: "Project5",
     listOfUsers: [
       {
         userName: "user 2",
@@ -321,7 +299,7 @@ export const PROJECTS = [
     ],
     listOfFeedbacks: [
       {
-        feedbackName: "feedback3",
+        feedbackName: "feedback9",
         listOfComments: [
           {
             feedbackedUser: "user 2",
@@ -346,7 +324,7 @@ export const PROJECTS = [
         ],
       },
       {
-        feedbackName: "feedback4",
+        feedbackName: "feedback10",
         listOfComments: [
           {
             feedbackedUser: "user 2",
@@ -373,7 +351,7 @@ export const PROJECTS = [
     ],
   },
   {
-    projectName: "Project 6",
+    projectName: "Project6",
     listOfUsers: [
       {
         userName: "user 2",
@@ -390,12 +368,11 @@ export const PROJECTS = [
       {
         userName: "user 7",
         owner: false
->>>>>>> upstream/develop
       },
     ],
     listOfFeedbacks: [
       {
-        feedbackName: "feedback3",
+        feedbackName: "feedback11",
         listOfComments: [
           {
             feedbackedUser: "user2",
@@ -420,7 +397,7 @@ export const PROJECTS = [
         ],
       },
       {
-        feedbackName: "feedback4",
+        feedbackName: "feedback12",
         listOfComments: [
           {
             feedbackedUser: "user2",
