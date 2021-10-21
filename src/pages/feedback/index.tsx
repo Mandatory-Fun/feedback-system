@@ -40,6 +40,7 @@ const FeedbackListPage = () => {
               inputRef={inputFeedbackRef}
               label="Name of new feedback"
               variant="outlined"
+              required
             />
           </Grid>
 

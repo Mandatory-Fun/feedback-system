@@ -2,12 +2,10 @@ import {
   Redirect,
   Route,
   BrowserRouter as Router,
-  Switch
+  Switch,
 } from "react-router-dom";
 
 import Dashboard from "./pages/dashboard";
-import LoginPage from "./pages/login";
-import NavBar from "./components/NavBar";
 import FeedbackListPage from "./pages/feedback";
 import GuardRoute from "./routes/GuardRoute";
 import LoginPage from "./pages/login";
