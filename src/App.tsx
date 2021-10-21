@@ -5,6 +5,7 @@ import {
   Switch,
   Route,
   Redirect,
+  useRouteMatch
 } from "react-router-dom";
 import Dashboard from "./pages/dashboard";
 import LoginPage from "./pages/login";
@@ -13,10 +14,15 @@ import FeedbackListPage from "./pages/feedback";
 import { Store } from "./redux";
 import GuardRoute from "./routes/GuardRoute";
 
+
 function App() {
   const userIsLogged = useSelector(
     (state: Store) => state.authReducer.isSignedIn
   );
+
+  let { path } = useRouteMatch();
+  console.log('path', path);
+
 
   return (
     <Router>
@@ -34,7 +40,10 @@ function App() {
         <Route
           path="/dashboard/allProjects/:nameOfProject"
           component={FeedbackListPage}
-        />
+        >
+        </Route>
+
+
         <GuardRoute path="/dashboard" component={Dashboard} />
       </Switch>
     </Router>

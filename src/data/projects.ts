@@ -1,15 +1,15 @@
 export const PROJECTS = [
   {
-    projectName: "Project 1",
+    projectName: "Project1",
     listOfUsers: [
       {
-        userName: "user 1",
+        userName: "user1",
       },
       {
-        userName: "user 2",
+        userName: "user2",
       },
       {
-        userName: "user 3",
+        userName: "user3",
       },
     ],
     listOfFeedbacks: [
@@ -17,17 +17,17 @@ export const PROJECTS = [
         feedbackName: "feedback1",
         listOfComments: [
           {
-            feedbackedUser: "user 1",
+            feedbackedUser: "user1",
             feedbackTotal: 5,
             comments: ["Good", "good"],
           },
           {
-            feedbackedUser: "user 2",
+            feedbackedUser: "user2",
             feedbackTotal: 4,
             comments: ["Okay", "good"],
           },
           {
-            feedbackedUser: "user 3",
+            feedbackedUser: "user3",
             feedbackTotal: 4,
             comments: ["Good partner", "good"],
           },
@@ -37,17 +37,17 @@ export const PROJECTS = [
         feedbackName: "feedback2",
         listOfComments: [
           {
-            feedbackedUser: "user 3",
+            feedbackedUser: "user3",
             feedbackTotal: 5,
             comments: ["Good", "good"],
           },
           {
-            feedbackedUser: "user 1",
+            feedbackedUser: "user1",
             feedbackTotal: 3,
             comments: ["Okay", "good"],
           },
           {
-            feedbackedUser: "user 2",
+            feedbackedUser: "user2",
             feedbackTotal: 1,
             comments: ["lazy", "not good"],
           },
@@ -56,19 +56,19 @@ export const PROJECTS = [
     ],
   },
   {
-    projectName: "Project 2",
+    projectName: "Project2",
     listOfUsers: [
       {
-        userName: "user 2",
+        userName: "user2",
       },
       {
-        userName: "user 5",
+        userName: "user5",
       },
       {
-        userName: "user 6",
+        userName: "user6",
       },
       {
-        userName: "user 7",
+        userName: "user7",
       },
     ],
     listOfFeedbacks: [
@@ -76,22 +76,22 @@ export const PROJECTS = [
         feedbackName: "feedback3",
         listOfComments: [
           {
-            feedbackedUser: "user 2",
+            feedbackedUser: "user2",
             feedbackTotal: 3,
             comments: ["Okay", "good", "normal"],
           },
           {
-            feedbackedUser: "user 5",
+            feedbackedUser: "user5",
             feedbackTotal: 1,
             comments: ["bad", "bad", "lazy"],
           },
           {
-            feedbackedUser: "user 6",
+            feedbackedUser: "user6",
             feedbackTotal: 2,
             comments: ["not active", "not contribute", "not good"],
           },
           {
-            feedbackedUser: "user 7",
+            feedbackedUser: "user7",
             feedbackTotal: 4,
             comments: ["good", "good", "good"],
           },
@@ -101,22 +101,22 @@ export const PROJECTS = [
         feedbackName: "feedback4",
         listOfComments: [
           {
-            feedbackedUser: "user 2",
+            feedbackedUser: "user2",
             feedbackTotal: 1,
             comments: ["not active", "absent", "absent"],
           },
           {
-            feedbackedUser: "user 6",
+            feedbackedUser: "user6",
             feedbackTotal: 2,
             comments: ["Not good", "fine"],
           },
           {
-            feedbackedUser: "user 5",
+            feedbackedUser: "user5",
             feedbackTotal: 5,
             comments: ["Excellent!", "Good"],
           },
           {
-            feedbackedUser: "user 7",
+            feedbackedUser: "user7",
             feedbackTotal: 4,
             comments: ["Okay", "good"],
           },
