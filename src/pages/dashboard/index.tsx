@@ -1,12 +1,77 @@
-import { Button, Typography } from '@mui/material';
 import { useDispatch, useSelector } from 'react-redux';
-
-import { Box } from '@mui/system';
+import {
+  Button,
+  Dialog,
+  DialogTitle,
+  TextField,
+  DialogContent,
+  DialogActions,
+  Typography,
+  Box,
+} from "@mui/material";
 import ProjectList from './projectList';
-import React from 'react';
+import React, { useState } from 'react';
 import { Store } from '../../redux';
 import { addNewProject } from '../../redux/actions/Project';
 import { projectType } from '../../types';
+
+
+export interface SimpleDialogProps {
+  open: boolean;
+  onClose: () => void;
+  onSubmit: (newProject: any) => void;
+}
+
+function SimpleDialog(props: SimpleDialogProps) {
+  const { onClose, onSubmit, open } = props;
+  const [project, setProject] = useState('');
+
+  const handleClose = () => {
+    onClose();
+  };
+
+  const submit = () => {
+    onSubmit(project);
+    handleClose();
+  }
+
+  return (
+    <Dialog onClose={handleClose} open={open}>
+      <DialogTitle>Project form</DialogTitle>
+      <DialogContent>
+        <Typography variant="h2" gutterBottom component="div">
+            Project
+        </Typography>
+        <TextField
+          autoFocus
+          margin="dense"
+          id="title"
+          label="Title"
+          type="text"
+          fullWidth
+          variant="standard"
+          placeholder="Project title"
+          onChange={(event) => setProject(event.target.value)}
+        />
+        <TextField
+          autoFocus
+          margin="dense"
+          id="email"
+          label="Email"
+          fullWidth
+          variant="standard"
+          placeholder="Type invite email"
+          multiline
+          rows={4}
+        />
+      </DialogContent>
+      <DialogActions>
+        <Button onClick={handleClose}>Cancel</Button>
+        <Button onClick={submit}>Submit</Button>
+      </DialogActions>
+    </Dialog>
+  );
+}
 
 const Dashboard = () => {
   const allProjects = useSelector((state: Store) => state.projectReducer)
@@ -15,13 +80,20 @@ const Dashboard = () => {
 
   const myOwnProjects = allProjects.filter((project: projectType) => project.listOfUsers.find((user: any) => user.owner && user.userName === 'user 2'))
   const invitedProjects = allProjects.filter((project: projectType) => project.listOfUsers.find((user: any) => !user.owner && user.userName === 'user 2'))
+  const [open, setOpen] = React.useState(false);
 
+  const handleClickOpen = () => {
+    setOpen(true);
+  };
 
-
+  const handleClose = () => {
+    setOpen(false);
+  };
+  
   const addProject = (newProject: any) => {
-    console.log('Create btn works');
+    console.log('Create btn works asdasdasda');
     const data = {
-      projectName: "Project 7",
+      projectName: newProject,
       listOfUsers: [
         {
           userName: "user 2",
@@ -103,8 +175,9 @@ const Dashboard = () => {
       <Typography mt={2} mb={2} fontWeight='bold' pl={1}>ALL PROJECTS</Typography>
       <Button
         variant="contained"
-        style={{ backgroundColor: '#12824C', color: '#FFFFFF' }}
-        onClick={addProject}
+        style={{ backgroundColor: '#12824C',color: '#FFFFFF'}}
+        onClick={handleClickOpen}
+
       >
         Create
       </Button>
@@ -113,9 +186,10 @@ const Dashboard = () => {
       <ProjectList projectList={myOwnProjects} />
 
       <Typography variant="h6" component="div" mt={3} mb={1} pl={1}>INVITED PROJECTS</Typography>
-      <ProjectList projectList={invitedProjects} />
+      <ProjectList projectList={invitedProjects}/>
+      <SimpleDialog open={open} onClose={handleClose} onSubmit={addProject}/>
+  </Box>
 
-    </Box>
   )
 };
 

@@ -3,7 +3,7 @@ import {
   Redirect,
   Route,
   BrowserRouter as Router,
-  Switch
+  Switch,
 } from "react-router-dom";
 import { useSelector } from "react-redux";
 
