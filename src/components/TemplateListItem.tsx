@@ -12,6 +12,8 @@ import {
   Typography,
   Box,
 } from "@mui/material";
+import { Link, useRouteMatch } from "react-router-dom";
+
 export interface SimpleDialogProps {
   open: boolean;
   isRead: boolean;
@@ -91,7 +93,6 @@ function SimpleDialog(props: SimpleDialogProps) {
   );
 }
 
-
 export default function TemplateListItem(props: any) {
   const { listOfFeedbacks } = props;
   const arrayOfTitleOfFeedbacks = [...listOfFeedbacks].map(
@@ -129,15 +130,14 @@ export default function TemplateListItem(props: any) {
             key={index}
             disableGutters
             secondaryAction={
-              index % 2 ? (
+              index !== 0 ? (
                 <Button variant="contained" onClick={giveFeedback}>
                   Give feedback
                 </Button>
               ) : (
-              <Button variant="outlined">
-                <Link to={`${url}/${value}`} target='_blank'>Read feedback
-                </Link>
-              </Button>
+                <Button variant="outlined">
+                  <Link to={`${url}/${value}`}>Read feedback</Link>
+                </Button>
               )
             }
           >
@@ -147,6 +147,5 @@ export default function TemplateListItem(props: any) {
       </List>
       <SimpleDialog open={open} onClose={handleClose} isRead={read} />
     </>
-
   );
 }

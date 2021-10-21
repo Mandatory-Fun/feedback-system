@@ -1,18 +1,19 @@
 import React, { useRef } from "react";
 import { useSelector, useDispatch } from "react-redux";
-import { useParams, Switch, Route, useRouteMatch } from "react-router-dom";
+import { useParams, Switch, useRouteMatch } from "react-router-dom";
 
 import { Store } from "../../redux";
 import styles from "./styles.module.css";
 import TemplateListItem from "../../components/TemplateListItem";
 import { createNewFeedback } from "../../redux/actions/Project";
-import { Box } from '@mui/system';
+import { Box } from "@mui/system";
 
 import Typography from "@mui/material/Typography";
 import TextField from "@mui/material/TextField";
 import Grid from "@mui/material/Grid";
 import Button from "@mui/material/Button";
 import Summary from "../summary";
+import GuardRoute from "../../routes/GuardRoute";
 
 type Params = {
   nameOfProject: string;
@@ -33,8 +34,8 @@ const FeedbackListPage = () => {
 
   return (
     <Switch>
-      <Route exact path={path}>
-        <Box width='1200px' m='auto'>
+      <GuardRoute exact path={path}>
+        <Box width="1200px" m="auto">
           <Typography variant="h4" component="h2" className={styles.title}>
             {nameOfProject}
           </Typography>
@@ -68,11 +69,8 @@ const FeedbackListPage = () => {
             listOfFeedbacks={listOfFeedbackOfProject[0].listOfFeedbacks}
           />
         </Box>
-      </Route>
-      <Route
-        path={`${path}/:feedbackName`}
-        component={Summary}
-      />
+      </GuardRoute>
+      <GuardRoute path={`${path}/:feedbackName`} component={Summary} />
     </Switch>
   );
 };

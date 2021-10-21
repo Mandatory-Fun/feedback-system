@@ -14,12 +14,10 @@ import GuardRoute from "./routes/GuardRoute";
 import LoginPage from "./pages/login";
 import NavBar from "./components/NavBar";
 
-
 function App() {
   const userIsLogged = useSelector(
     (state: Store) => state.authReducer.isSignedIn
   );
-
 
   return (
     <Router>
@@ -33,12 +31,10 @@ function App() {
           {!userIsLogged ? <LoginPage /> : <Redirect to="/dashboard" />}
         </Route>
 
-        <Route
+        <GuardRoute
           path="/dashboard/allProjects/:nameOfProject"
           component={FeedbackListPage}
-        >
-        </Route>
-
+        />
 
         <GuardRoute path="/dashboard" component={Dashboard} />
       </Switch>
