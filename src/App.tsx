@@ -1,23 +1,25 @@
+import React from "react";
 import {
   Redirect,
   Route,
   BrowserRouter as Router,
   Switch,
 } from "react-router-dom";
+import { useSelector } from "react-redux";
 
+import { Store } from "./redux";
 import Dashboard from "./pages/dashboard";
 import FeedbackListPage from "./pages/feedback";
 import GuardRoute from "./routes/GuardRoute";
 import LoginPage from "./pages/login";
 import NavBar from "./components/NavBar";
-import React from "react";
-import { Store } from "./redux";
-import { useSelector } from "react-redux";
+
 
 function App() {
   const userIsLogged = useSelector(
     (state: Store) => state.authReducer.isSignedIn
   );
+
 
   return (
     <Router>
@@ -34,7 +36,10 @@ function App() {
         <Route
           path="/dashboard/allProjects/:nameOfProject"
           component={FeedbackListPage}
-        />
+        >
+        </Route>
+
+
         <GuardRoute path="/dashboard" component={Dashboard} />
       </Switch>
     </Router>

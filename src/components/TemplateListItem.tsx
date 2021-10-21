@@ -91,6 +91,7 @@ function SimpleDialog(props: SimpleDialogProps) {
   );
 }
 
+
 export default function TemplateListItem(props: any) {
   const { listOfFeedbacks } = props;
   const arrayOfTitleOfFeedbacks = [...listOfFeedbacks].map(
@@ -99,6 +100,8 @@ export default function TemplateListItem(props: any) {
 
   const [open, setOpen] = React.useState(false);
   const [read, setRead] = React.useState(false);
+
+  let { url } = useRouteMatch();
 
   const handleClickOpen = () => {
     setOpen(true);
@@ -131,9 +134,10 @@ export default function TemplateListItem(props: any) {
                   Give feedback
                 </Button>
               ) : (
-                <Button variant="outlined" onClick={readFeedback}>
-                  Read feedback
-                </Button>
+              <Button variant="outlined">
+                <Link to={`${url}/${value}`} target='_blank'>Read feedback
+                </Link>
+              </Button>
               )
             }
           >
@@ -143,5 +147,6 @@ export default function TemplateListItem(props: any) {
       </List>
       <SimpleDialog open={open} onClose={handleClose} isRead={read} />
     </>
+
   );
 }

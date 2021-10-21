@@ -15,27 +15,6 @@ import { Store } from '../../redux';
 import { addNewProject } from '../../redux/actions/Project';
 import { projectType } from '../../types';
 
-/*export type projectType = {projectId: string, title: string, members: {userId: string, name: string, feedback: []}[]}
-
-export type projectListType = projectType[]
-
-const myProjectList : projectListType = [
-  {projectId: '1a', title: 'abc', members: []},
-  {projectId: '2b', title: 'aaa', members: []},
-  {projectId: '3c', title: 'bbb', members: []},
-  {projectId: '4c', title: 'bbb', members: []},
-  {projectId: '5c', title: 'bbb', members: []},
-  {projectId: '6c', title: 'bbb', members: []},
-]
-
-const JoinedProjectList : projectListType = [
-  {projectId: '1a', title: 'abc', members: []},
-  {projectId: '2b', title: 'aaa', members: []},
-  {projectId: '3c', title: 'bbb', members: []},
-  {projectId: '4c', title: 'bbb', members: []},
-  {projectId: '5c', title: 'bbb', members: []},
-  {projectId: '6c', title: 'bbb', members: []},
-]*/
 
 export interface SimpleDialogProps {
   open: boolean;
@@ -94,11 +73,9 @@ function SimpleDialog(props: SimpleDialogProps) {
   );
 }
 
-
 const Dashboard = () => {
   const allProjects = useSelector((state: Store) => state.projectReducer)
-  console.log('allProject', allProjects)
- 
+
   const dispatch = useDispatch();
 
   const myOwnProjects = allProjects.filter((project: projectType) => project.listOfUsers.find((user: any) => user.owner && user.userName === 'user 2'))
@@ -120,7 +97,7 @@ const Dashboard = () => {
       listOfUsers: [
         {
           userName: "user 2",
-          owner: false
+          owner: true
         },
         {
           userName: "user 5",
@@ -128,7 +105,7 @@ const Dashboard = () => {
         },
         {
           userName: "user 6",
-          owner: true
+          owner: false
         },
         {
           userName: "user 7",
@@ -192,27 +169,27 @@ const Dashboard = () => {
     dispatch(action)
   }
 
-  console.log('allPrj', allProjects)
- 
-  return ( 
+  return (
     <Box width='1200px' m='auto'>
- 
+
       <Typography mt={2} mb={2} fontWeight='bold' pl={1}>ALL PROJECTS</Typography>
-      <Button 
+      <Button
         variant="contained"
         style={{ backgroundColor: '#12824C',color: '#FFFFFF'}}
         onClick={handleClickOpen}
+
       >
         Create
       </Button>
 
       <Typography variant="h6" component="div" mt={3} mb={1} pl={1}>MY PROJECTS</Typography>
-      <ProjectList projectList={myOwnProjects}/>
+      <ProjectList projectList={myOwnProjects} />
 
       <Typography variant="h6" component="div" mt={3} mb={1} pl={1}>INVITED PROJECTS</Typography>
       <ProjectList projectList={invitedProjects}/>
       <SimpleDialog open={open} onClose={handleClose} onSubmit={addProject}/>
   </Box>
+
   )
 };
 
