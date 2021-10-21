@@ -1,6 +1,6 @@
 export const PROJECTS = [
   {
-    projectName: "Project 1",
+    projectName: "Project1",
     listOfUsers: [
       {
         userName: "user 1",
@@ -59,7 +59,7 @@ export const PROJECTS = [
     ],
   },
   {
-    projectName: "Project 2",
+    projectName: "Project2",
     listOfUsers: [
       {
         userName: "user 2",
@@ -132,7 +132,7 @@ export const PROJECTS = [
     ],
   },
   {
-    projectName: "Project 3",
+    projectName: "Project3",
     listOfUsers: [
       {
         userName: "user 2",
@@ -153,7 +153,7 @@ export const PROJECTS = [
     ],
     listOfFeedbacks: [
       {
-        feedbackName: "feedback3",
+        feedbackName: "feedback5",
         listOfComments: [
           {
             feedbackedUser: "user 2",
@@ -178,7 +178,7 @@ export const PROJECTS = [
         ],
       },
       {
-        feedbackName: "feedback4",
+        feedbackName: "feedback6",
         listOfComments: [
           {
             feedbackedUser: "user 2",
@@ -205,7 +205,7 @@ export const PROJECTS = [
     ],
   },
   {
-    projectName: "Project 4",
+    projectName: "Project4",
     listOfUsers: [
       {
         userName: "user 2",
@@ -226,7 +226,7 @@ export const PROJECTS = [
     ],
     listOfFeedbacks: [
       {
-        feedbackName: "feedback3",
+        feedbackName: "feedback7",
         listOfComments: [
           {
             feedbackedUser: "user 2",
@@ -251,7 +251,7 @@ export const PROJECTS = [
         ],
       },
       {
-        feedbackName: "feedback4",
+        feedbackName: "feedback8",
         listOfComments: [
           {
             feedbackedUser: "user 2",
@@ -278,7 +278,7 @@ export const PROJECTS = [
     ],
   },
   {
-    projectName: "Project 5",
+    projectName: "Project5",
     listOfUsers: [
       {
         userName: "user 2",
@@ -299,7 +299,7 @@ export const PROJECTS = [
     ],
     listOfFeedbacks: [
       {
-        feedbackName: "feedback3",
+        feedbackName: "feedback9",
         listOfComments: [
           {
             feedbackedUser: "user 2",
@@ -324,7 +324,7 @@ export const PROJECTS = [
         ],
       },
       {
-        feedbackName: "feedback4",
+        feedbackName: "feedback10",
         listOfComments: [
           {
             feedbackedUser: "user 2",
@@ -351,7 +351,7 @@ export const PROJECTS = [
     ],
   },
   {
-    projectName: "Project 6",
+    projectName: "Project6",
     listOfUsers: [
       {
         userName: "user 2",
@@ -372,7 +372,7 @@ export const PROJECTS = [
     ],
     listOfFeedbacks: [
       {
-        feedbackName: "feedback3",
+        feedbackName: "feedback11",
         listOfComments: [
           {
             feedbackedUser: "user 2",
@@ -397,7 +397,7 @@ export const PROJECTS = [
         ],
       },
       {
-        feedbackName: "feedback4",
+        feedbackName: "feedback12",
         listOfComments: [
           {
             feedbackedUser: "user 2",

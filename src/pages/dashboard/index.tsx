@@ -10,7 +10,7 @@ import { projectType } from '../../types';
 
 const Dashboard = () => {
   const allProjects = useSelector((state: Store) => state.projectReducer)
- 
+
   const dispatch = useDispatch();
 
   const myOwnProjects = allProjects.filter((project: projectType) => project.listOfUsers.find((user: any) => user.owner && user.userName === 'user 2'))
@@ -96,26 +96,26 @@ const Dashboard = () => {
     const action = addNewProject(data)
     dispatch(action)
   }
- 
-  return ( 
+
+  return (
     <Box width='1200px' m='auto'>
- 
+
       <Typography mt={2} mb={2} fontWeight='bold' pl={1}>ALL PROJECTS</Typography>
-      <Button 
+      <Button
         variant="contained"
-        style={{ backgroundColor: '#12824C',color: '#FFFFFF'}}
+        style={{ backgroundColor: '#12824C', color: '#FFFFFF' }}
         onClick={addProject}
       >
         Create
       </Button>
 
       <Typography variant="h6" component="div" mt={3} mb={1} pl={1}>MY PROJECTS</Typography>
-      <ProjectList projectList={myOwnProjects}/>
+      <ProjectList projectList={myOwnProjects} />
 
       <Typography variant="h6" component="div" mt={3} mb={1} pl={1}>INVITED PROJECTS</Typography>
-      <ProjectList projectList={invitedProjects}/>
-    
-  </Box>
+      <ProjectList projectList={invitedProjects} />
+
+    </Box>
   )
 };
 

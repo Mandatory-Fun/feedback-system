@@ -144,7 +144,7 @@ export default function NavBar() {
             />
           </Search>
 
-          <Link to="/dashboard">
+          <Link to="/dashboard" style={{ textDecoration: "none" }}>
             <Button variant="text" style={{ color: "#FFFFFF" }}>
               DashBoard
             </Button>

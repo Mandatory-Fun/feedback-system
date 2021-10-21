@@ -5,7 +5,7 @@ import { PROJECTS } from "../data/projects";
 import thunk from "redux-thunk";
 
 const defaultState: Store = {
-  authReducer: { isSignedIn: false, email: "" },
+  authReducer: { isSignedIn: true, email: "" },
   projectReducer: PROJECTS,
   
 };
