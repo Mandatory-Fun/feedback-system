@@ -1,7 +1,6 @@
 import React from "react";
 import {
   Redirect,
-  useRouteMatch,
   Route,
   BrowserRouter as Router,
   Switch

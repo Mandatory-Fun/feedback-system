@@ -1,8 +1,13 @@
 import React from 'react';
-import { useDispatch, useSelector } from 'react-redux';
+import { useSelector } from 'react-redux';
 import { Link, useParams } from "react-router-dom";
 import Grid from "@mui/material/Grid";
 import Button from "@mui/material/Button";
+import { Box } from '@mui/system';
+import { Typography } from '@mui/material';
+import List from "@mui/material/List";
+import ListItem from "@mui/material/ListItem";
+import ListItemText from "@mui/material/ListItemText";
 
 import { Store } from "../../redux";
 import ListOfComments from '../../components/ListOfComments'
@@ -16,8 +21,6 @@ function Summary() {
 
     const { nameOfProject, feedbackName } = useParams<Params>();
 
-    const dispatch = useDispatch();
-
     const listOfFeedbacks = useSelector(
         (state: Store) => state.projectReducer
     ).filter((el: any) => el.projectName === nameOfProject)[0].listOfFeedbacks;
@@ -28,33 +31,35 @@ function Summary() {
 
 
     return (
-        <div className='container'>
-            <h1>SUMMARY</h1>
-            <div>
-                <div>
-                    <h3>Name of Project: </h3>
-                    <h2>{nameOfProject}</h2>
-                </div>
-                <div>
-                    <h3>Name of Feedback: </h3>
-                    <h2>{feedbackName}</h2>
-                </div>
-                <div>
-                    <h3>Your feedback Score: </h3>
-                    <h3>{feedbackSum.feedbackTotal}</h3>
-                </div>
-                <div>
-                    <h3>Comments</h3>
+        <Box width='1200px' m='auto'>
+            <Typography variant="h3" mt={2} mb={2} fontWeight='bold' style={{ textTransform: 'uppercase' }} pl={1}>summary</Typography>
+            <List sx={{ width: "100%", maxWidth: 480, bgcolor: "background.paper" }}>
+                <ListItem>
+                    <ListItemText primary="Name of Project" />
+                    <ListItemText style={{ textTransform: 'uppercase' }} primary={`${nameOfProject}`} />
+                </ListItem>
+                <ListItem>
+                    <ListItemText primary="Name of Feedback: " />
+                    <ListItemText style={{ textTransform: 'uppercase' }} primary={`${feedbackName}`} />
+                </ListItem>
+                <ListItem>
+                    <ListItemText primary="Your feedback Score:" />
+                    <ListItemText primary={`${feedbackSum.feedbackTotal}`} />
+                </ListItem>
+                <Box pl={2} pt={1}>
+                    <ListItemText primary="Comments: " />
                     <ListOfComments comments={feedbackSum.comments} />
-                </div>
-            </div>
-            <Button variant="contained" size="large" >
-                <Link to='/dashboard'>
-                    Go back Projects
-                </Link>
-            </Button>
+                </Box>
+                <Box sx={{ justifyContent: 'flex-end' }}>
+                    <Button variant="contained" size="large">
+                        <Link to='/dashboard' style={{ color: "white", textDecoration: "none" }}>
+                            Go back Projects
+                        </Link>
+                    </Button>
+                </Box>
+            </List>
 
-        </div >
+        </Box >
     )
 }
 
