@@ -27,6 +27,8 @@ function Summary() {
     const listOfComments = listOfFeedbacks.filter((feedback: any) => feedback.feedbackName === feedbackName)[0].listOfComments
 
     const feedbackSum = listOfComments.filter((sum: any) => sum.feedbackedUser === 'user 2')[0]
+    console.log('feedbackSum', feedbackSum);
+
 
 
     return (
